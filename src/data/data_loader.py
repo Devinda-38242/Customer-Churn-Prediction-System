@@ -6,6 +6,7 @@ def load_data():
     df = pd.read_csv(file_path)
     return df
 
+# Check the data set is loaded correctly
 if __name__ == "__main__":
     df = load_data()
     print("Dataset loaded successfully!")
