@@ -1,4 +1,4 @@
-# 🔮 AI-Powered Customer Churn Prediction System
+#  AI-Powered Customer Churn Prediction System
 
 > **An end-to-end Machine Learning project for predicting customer churn, understanding why customers are at risk, and eventually recommending personalized retention strategies.**
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🌟 Project Overview
+##  Project Overview
 
 Customer churn is one of the major challenges faced by subscription-based businesses.
 
@@ -20,17 +20,17 @@ This project aims to build an **AI-powered Customer Churn Prediction System** th
 
 The final system is designed to:
 
-* 🎯 Predict the probability of customer churn
-* 🔍 Explain why a customer is considered high-risk
-* 💡 Generate personalized retention recommendations
-* 📊 Provide interactive business analytics
-* 🌐 Offer a web interface for making predictions
-* 📁 Allow businesses to upload customer datasets
-* 🤖 Apply Explainable AI techniques such as **SHAP**
+*  Predict the probability of customer churn
+*  Explain why a customer is considered high-risk
+*  Generate personalized retention recommendations
+*  Provide interactive business analytics
+*  Offer a web interface for making predictions
+*  Allow businesses to upload customer datasets
+*  Apply Explainable AI techniques such as **SHAP**
 
 ---
 
-# 🎯 Project Objectives
+#  Project Objectives
 
 The main objectives of this project are:
 
@@ -60,7 +60,7 @@ Create a web-based interface where users can upload customer data and receive pr
 
 ---
 
-# 🧠 Planned System
+#  Planned System
 
 The overall system is planned around the following pipeline:
 
@@ -118,22 +118,22 @@ The overall system is planned around the following pipeline:
 
 ---
 
-# 📊 Dataset
+#  Dataset
 
 The project uses the **Telco Customer Churn dataset**, which contains information about telecommunications customers and whether they eventually churned.
 
 The dataset includes information related to:
 
-* 👤 Customer demographics
-* 📅 Customer tenure
-* 📱 Phone services
-* 🌐 Internet services
-* 💳 Payment methods
-* 💰 Monthly charges
-* 💵 Total charges
-* 📄 Contract type
-* 🧾 Billing information
-* 🚪 Customer churn status
+*  Customer demographics
+*  Customer tenure
+*  Phone services
+*  Internet services
+*  Payment methods
+*  Monthly charges
+*  Total charges
+*  Contract type
+*  Billing information
+*  Customer churn status
 
 The target variable is:
 
@@ -154,7 +154,7 @@ No  → Customer stayed
 
 The project is being developed step-by-step as an end-to-end Machine Learning system.
 
-### ✅ Completed
+###  Completed
 
 * [x] Project environment setup
 * [x] Dataset collection
@@ -168,7 +168,7 @@ The project is being developed step-by-step as an end-to-end Machine Learning sy
 * [x] Identification of important customer patterns
 
 
-### 🚧 In Progress
+###  In Progress
 * [ ] Data preprocessing
 * [ ] Data type conversion
 * [ ] Preparation of data for Machine Learning
@@ -179,7 +179,7 @@ The project is being developed step-by-step as an end-to-end Machine Learning sy
 * [ ] Model comparison
 * [ ] Hyperparameter tuning
 
-### 🔮 Planned
+###  Planned
 
 * [ ] Model evaluation
 * [ ] Churn probability prediction
@@ -192,25 +192,25 @@ The project is being developed step-by-step as an end-to-end Machine Learning sy
 
 ---
 
-# 📈 Exploratory Data Analysis
+#  Exploratory Data Analysis
 
 During the EDA phase, different customer attributes were investigated to understand their relationship with churn.
 
 Some important patterns identified include:
 
-### 📋 Contract Type
+###  Contract Type
 
 Customers with shorter-term contracts show a higher tendency to churn compared with customers on longer-term contracts.
 
-### 🌐 Internet Service
+###  Internet Service
 
 Customers using **Fiber Optic** internet services showed a comparatively higher churn rate within the analyzed dataset.
 
-### 💰 Monthly Charges
+###  Monthly Charges
 
 Higher monthly charges were associated with increased churn among the analyzed customers.
 
-### 🛡️ Online Security & Technical Support
+###  Online Security & Technical Support
 
 Customers without additional services such as online security and technical support showed higher churn tendencies.
 
@@ -222,20 +222,20 @@ These observations will later be used to support feature engineering and model i
 
 | Technology                   | Purpose                           |
 | ---------------------------- | --------------------------------- |
-| 🐍 Python                    | Core programming language         |
-| 🐼 Pandas                    | Data manipulation and analysis    |
-| 🔢 NumPy                     | Numerical computing               |
-| 📊 Matplotlib                | Data visualization                |
-| 🎨 Seaborn                   | Statistical visualization         |
-| 🤖 Scikit-learn              | Machine Learning                  |
-| 🧠 SHAP                      | Explainable AI                    |
-| 🌐 Streamlit / Web Framework | Planned application interface     |
-| 📊 Plotly                    | Planned interactive visualization |
-| 🐙 Git & GitHub              | Version control                   |
+|  Python                    | Core programming language         |
+|  Pandas                    | Data manipulation and analysis    |
+|  NumPy                     | Numerical computing               |
+|  Matplotlib                | Data visualization                |
+|  Seaborn                   | Statistical visualization         |
+|  Scikit-learn              | Machine Learning                  |
+|  SHAP                      | Explainable AI                    |
+|  Streamlit / Web Framework | Planned application interface     |
+|  Plotly                    | Planned interactive visualization |
+|  Git & GitHub              | Version control                   |
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```text
 Customer-Churn-Prediction-System/
@@ -272,7 +272,7 @@ Customer-Churn-Prediction-System/
 
 ---
 
-# 🧪 Machine Learning Strategy
+#  Machine Learning Strategy
 
 The Machine Learning stage will investigate multiple classification algorithms rather than relying on a single model.
 
@@ -303,7 +303,7 @@ Because customer churn prediction is a business-risk problem, **accuracy alone w
 
 ---
 
-# 🔍 Explainable AI
+#  Explainable AI
 
 A major goal of this project is to make Machine Learning predictions understandable.
 
@@ -316,7 +316,7 @@ Customer → HIGH CHURN RISK
 the final system aims to provide an explanation such as:
 
 ```text
-⚠️ High Churn Risk
+ High Churn Risk
 
 Main contributing factors:
 
@@ -329,12 +329,12 @@ Main contributing factors:
 
 SHAP will be investigated to understand both:
 
-* 🌍 Global model behavior
-* 👤 Individual customer predictions
+*  Global model behavior
+*  Individual customer predictions
 
 ---
 
-# 💡 Personalized Retention Strategies
+#  Personalized Retention Strategies
 
 The final system will attempt to connect churn predictions with actionable business recommendations.
 
@@ -355,22 +355,22 @@ Retention Action
 
 Possible recommendations could include:
 
-* 📑 Contract upgrade offers
-* 💰 Personalized discounts
-* 🛡️ Security service bundles
-* 📞 Technical support assistance
-* 🎁 Loyalty offers
-* 📦 Service plan recommendations
+*  Contract upgrade offers
+*  Personalized discounts
+*  Security service bundles
+*  Technical support assistance
+*  Loyalty offers
+*  Service plan recommendations
 
 ---
 
-# 📊 Planned Dashboard
+#  Planned Dashboard
 
 The future dashboard will provide an interactive view of customer churn.
 
 Possible dashboard components:
 
-### 📌 Key Performance Indicators
+###  Key Performance Indicators
 
 * Total Customers
 * Churned Customers
@@ -378,7 +378,7 @@ Possible dashboard components:
 * Average Monthly Charges
 * High-Risk Customers
 
-### 📈 Visual Analytics
+###  Visual Analytics
 
 * Churn by Contract
 * Churn by Internet Service
@@ -387,7 +387,7 @@ Possible dashboard components:
 * Churn by Monthly Charges
 * Customer Risk Distribution
 
-### 👤 Individual Customer Analysis
+###  Individual Customer Analysis
 
 Users will eventually be able to inspect an individual customer's:
 
@@ -405,7 +405,7 @@ Recommended Retention Strategy
 
 ---
 
-# 🚀 Future Vision
+#  Future Vision
 
 The long-term goal is to transform this project from a traditional Machine Learning model into a **decision-support system for customer retention**.
 
@@ -435,7 +435,7 @@ but eventually:
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
 ### Devinda Idamgedara
 
@@ -447,7 +447,7 @@ Interested in:
 
 ---
 
-# 📜 License
+#  License
 
 This project is licensed under the **MIT License**.
 
@@ -455,8 +455,8 @@ See the [`LICENSE`](LICENSE) file for more information.
 
 ---
 
-⭐ **If you find this project interesting, consider giving the repository a star!**
+ **If you find this project interesting, consider giving the repository a star!**
 
-> 🚧 **This project is actively under development.**
+>  **This project is actively under development.**
 >
 > New Machine Learning, Explainable AI, recommendation, visualization, and deployment features will be added progressively.
