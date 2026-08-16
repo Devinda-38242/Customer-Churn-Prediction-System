@@ -6,16 +6,16 @@ import joblib
 import shap
 
 from src.data.feature_engineering import add_features
-
+from src.recommendation.recommender import (
+    generate_recommendations,
+    display_recommendations
+)
 
 
 # Project Root
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 MODEL_DIR = PROJECT_ROOT / "models"
-
-# Import Feature Engineering
-from src.data.feature_engineering import add_features
 
 
 # Model / Preprocessor Paths
@@ -397,6 +397,75 @@ def predict_customer(customer_data):
 
     return result
 
+# Complete Customer Analysis
+
+def analyze_customer(customer_data):
+    """
+    Perform complete customer churn analysis.
+
+    Pipeline:
+        Raw Customer
+        -> Prediction
+        -> Risk Level
+        -> SHAP Explanation
+        -> Personalized Recommendations
+    """
+
+    print(
+        "\n"
+        + "=" * 70
+    )
+
+    print(
+        "CUSTOMER CHURN ANALYSIS"
+    )
+
+    print(
+        "=" * 70
+    )
+
+    # --------------------------------------------------------
+    # Prediction + SHAP
+    # --------------------------------------------------------
+
+    prediction_result = predict_customer(
+        customer_data
+    )
+
+    # --------------------------------------------------------
+    # Generate recommendations
+    # --------------------------------------------------------
+
+    print(
+        "\nGenerating personalized "
+        "retention recommendations..."
+    )
+
+    recommendation_result = generate_recommendations(
+        customer_data,
+        prediction_result
+    )
+
+    # --------------------------------------------------------
+    # Combine results
+    # --------------------------------------------------------
+
+    complete_result = {
+        **prediction_result,
+        "recommendations": (
+            recommendation_result[
+                "recommendations"
+            ]
+        ),
+        "recommendation_count": (
+            recommendation_result[
+                "recommendation_count"
+            ]
+        )
+    }
+
+    return complete_result
+
 
 
 # Display Prediction
@@ -492,12 +561,29 @@ def main():
         "Total Charges": 256.50
     }
 
-    result = predict_customer(
+    result = analyze_customer(
         customer
     )
 
     display_prediction(
         result
+    )
+
+    display_recommendations(
+        {
+            "churn_probability": result[
+                "churn_probability"
+            ],
+            "risk_level": result[
+                "risk_level"
+            ],
+            "recommendation_count": result[
+                "recommendation_count"
+            ],
+            "recommendations": result[
+                "recommendations"
+            ]
+        }
     )
 
 
