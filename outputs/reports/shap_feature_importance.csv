@@ -1,0 +1,53 @@
+Feature,Mean Absolute SHAP
+num__Tenure Months,0.4504701791730995
+cat__Contract_Month-to-month,0.4412632181396842
+cat__Dependents_Yes,0.26391517732020336
+cat__Dependents_No,0.23927783911157904
+cat__Internet Service_Fiber optic,0.2326767069385712
+cat__Tech Support_No,0.21021819552502283
+cat__Online Security_No,0.2027615398732264
+cat__Contract_Two year,0.18749261899686961
+num__Monthly Charges,0.18316060076614296
+num__Total Charges,0.17231234061153286
+cat__Payment Method_Electronic check,0.14284891603019223
+num__New Customer + Month-to-Month,0.11995012817468867
+cat__Multiple Lines_No,0.1161844314369182
+cat__Streaming TV_Yes,0.07746774050735569
+cat__Online Backup_No,0.07007440195459672
+cat__Streaming Movies_Yes,0.06497280031407535
+cat__Paperless Billing_Yes,0.0547368533381782
+cat__Partner_Yes,0.04843887129979339
+cat__Paperless Billing_No,0.03972270896586021
+cat__Partner_No,0.02596606171720125
+cat__Gender_Female,0.01431006333678922
+cat__Online Security_Yes,0.010825219489309826
+cat__Senior Citizen_No,0.008013018802287704
+num__Additional Services Count,0.0077254009802353515
+cat__Phone Service_No,0.007405461340568189
+cat__Gender_Male,0.006350074479905403
+cat__Multiple Lines_No phone service,0.0063442174434247284
+cat__Phone Service_Yes,0.004481185033680096
+cat__Senior Citizen_Yes,0.004263227032487609
+cat__Internet Service_DSL,0.0028026422335592897
+cat__Device Protection_Yes,0.002298873748116039
+cat__Tech Support_Yes,0.002049044804674024
+cat__Contract_One year,0.0012987697763604633
+cat__Payment Method_Credit card (automatic),0.0010292836266836568
+cat__Payment Method_Bank transfer (automatic),0.00014709387640152126
+cat__Multiple Lines_Yes,0.0
+cat__Streaming TV_No internet service,0.0
+cat__Streaming TV_No,0.0
+cat__Device Protection_No internet service,0.0
+cat__Tech Support_No internet service,0.0
+cat__Online Security_No internet service,0.0
+cat__Online Backup_No internet service,0.0
+cat__Online Backup_Yes,0.0
+cat__Device Protection_No,0.0
+cat__Internet Service_No,0.0
+cat__Streaming Movies_No,0.0
+cat__Streaming Movies_No internet service,0.0
+cat__Payment Method_Mailed check,0.0
+cat__Tenure Group_Early,0.0
+cat__Tenure Group_Established,0.0
+cat__Tenure Group_Long-term,0.0
+cat__Tenure Group_New,0.0
