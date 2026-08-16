@@ -48,11 +48,7 @@ def add_features(df):
     df["Tenure Group"] = df["Tenure Months"].apply(assign_tenure_group)
 
 
-    print("\nContract Values:")
-    print(df["Contract"].value_counts())
-
-    print("\nTenure Months Summary:")
-    print(df["Tenure Months"].describe())
+    
 
     # New Customer + Month to Month
     new_customer = df["Tenure Months"] <= 12
