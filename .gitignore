@@ -48,7 +48,11 @@ data/processed/
 # Generated Model Artifacts
 # =========================
 
-/models/
+/models/*
+
+# Required production model artifacts
+!/models/gradient_boosting_tuned.pkl
+!/models/preprocessor.pkl
 # =========================
 # Local AI / Agent Tools
 # =========================
