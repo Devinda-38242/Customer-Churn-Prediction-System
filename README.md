@@ -1,6 +1,6 @@
-#  AI-Powered Customer Churn Prediction System
+# CHURN INTELLIGENCE
 
-> **An end-to-end Machine Learning project for predicting customer churn, understanding why customers are at risk, and eventually recommending personalized retention strategies.**
+## AI-Powered Customer Churn Prediction & Business Intelligence for Telecommunications
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge\&logo=pandas\&logoColor=white)
@@ -8,134 +8,517 @@
 ![Status](https://img.shields.io/badge/Status-In_Development-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
----
-
-##  Project Overview
-
-Customer churn is one of the major challenges faced by subscription-based businesses.
-
-Acquiring a new customer is often more expensive than retaining an existing one. Therefore, being able to **identify customers who are likely to leave before they actually churn** can provide businesses with a valuable opportunity to take preventive action.
-
-This project aims to build an **AI-powered Customer Churn Prediction System** that goes beyond simply predicting whether a customer will churn.
-
-The final system is designed to:
-
-*  Predict the probability of customer churn
-*  Explain why a customer is considered high-risk
-*  Generate personalized retention recommendations
-*  Provide interactive business analytics
-*  Offer a web interface for making predictions
-*  Allow businesses to upload customer datasets
-*  Apply Explainable AI techniques such as **SHAP**
+> **CHURN INTELLIGENCE** is an end-to-end Machine Learning and Explainable AI platform designed to help telecommunications businesses identify customers at risk of churn, understand the factors driving that risk, and support data-driven retention decisions.
 
 ---
 
-#  Project Objectives
+## Overview
 
-The main objectives of this project are:
+Customer churn is one of the most important challenges faced by telecommunications companies.
 
-### 1. Predict Customer Churn
+Acquiring new customers can be significantly more expensive than retaining existing customers. A reliable churn prediction system can therefore help businesses identify high-risk customers early and take appropriate retention actions.
 
-Develop Machine Learning models capable of predicting whether a customer is likely to leave the service.
+**CHURN INTELLIGENCE** goes beyond a simple churn classification model.
 
-### 2. Estimate Churn Probability
+The platform combines:
 
-Instead of producing only a `Yes / No` prediction, the system will provide a probability score representing the customer's estimated churn risk.
+* Machine Learning-based churn prediction
+* Churn probability estimation
+* Customer risk classification
+* SHAP-based Explainable AI
+* Customer-specific risk analysis
+* Retention recommendations
+* Batch customer prediction
+* Batch analytics
+* Business intelligence dashboards
+* Interactive Streamlit interface
 
-### 3. Explain Predictions
+The goal is to answer three important business questions:
 
-Use Explainable AI techniques such as **SHAP (SHapley Additive exPlanations)** to identify the factors contributing to each prediction.
+> **Who is likely to churn?**
 
-### 4. Recommend Retention Strategies
+> **Why are they likely to churn?**
 
-Use customer characteristics and model insights to suggest appropriate retention actions.
-
-### 5. Visualize Customer Risk
-
-Build interactive analytics that allow users to understand churn patterns and identify high-risk customer segments.
-
-### 6. Provide a Usable Interface
-
-Create a web-based interface where users can upload customer data and receive predictions and insights.
+> **What can the business do about it?**
 
 ---
 
-#  Planned System
+# Project Scope
 
-The overall system is planned around the following pipeline:
+### Current Industry: Telecommunications
+
+The current version of CHURN INTELLIGENCE is specifically designed for **telecommunications customer churn prediction**.
+
+The underlying Machine Learning model has been trained using telecommunications customer attributes such as:
+
+* Contract type
+* Customer tenure
+* Monthly charges
+* Total charges
+* Internet service
+* Phone service
+* Online security
+* Online backup
+* Device protection
+* Tech support
+* Streaming services
+* Payment method
+* Paperless billing
+* Customer demographics
+
+### Important Limitation
+
+The current model should **not** be directly applied to customer datasets from other industries such as banking, insurance, healthcare, retail, or SaaS.
+
+Different industries have different customer behaviors, features, churn definitions, and business processes.
+
+Supporting additional industries would require separate datasets, feature engineering pipelines, models, evaluation, explainability logic, and business rules.
+
+---
+
+# Key Features
+
+## 1. Customer Churn Prediction
+
+The system evaluates customer information and predicts whether the customer is likely to churn.
+
+The prediction is accompanied by a churn probability, allowing the system to represent customer risk more meaningfully than a simple Yes/No prediction.
+
+---
+
+## 2. Customer Risk Analysis
+
+Customers are categorized according to their estimated churn risk.
+
+The system provides information such as:
+
+* Churn probability
+* Risk level
+* Customer profile
+* Important customer characteristics
+* Contributing risk factors
+
+This allows users to quickly identify customers requiring attention.
+
+---
+
+## 3. Explainable AI with SHAP
+
+CHURN INTELLIGENCE uses **SHAP (SHapley Additive exPlanations)** to make Machine Learning predictions more understandable.
+
+Instead of providing only:
 
 ```text
-                 ┌──────────────────────┐
-                 │   Customer Dataset   │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │   Data Preprocessing │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Exploratory Data     │
-                 │ Analysis (EDA)       │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Feature Engineering  │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Machine Learning     │
-                 │ Model Training       │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Model Evaluation     │
-                 └──────────┬───────────┘
-                            │
-                 ┌──────────┴───────────┐
-                 ▼                      ▼
-        ┌─────────────────┐    ┌─────────────────┐
-        │ Churn           │    │ Explainable AI │
-        │ Prediction      │    │ (SHAP)         │
-        └────────┬────────┘    └────────┬────────┘
-                 │                      │
-                 └──────────┬───────────┘
-                            ▼
-                 ┌──────────────────────┐
-                 │ Retention Strategy   │
-                 │ Recommendations      │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Dashboard / Web App  │
-                 └──────────────────────┘
+HIGH CHURN RISK
+```
+
+the system can identify the factors contributing to the prediction.
+
+Examples of potentially influential factors include:
+
+* Month-to-month contracts
+* Short tenure
+* Higher monthly charges
+* Fiber optic internet service
+* Lack of technical support
+* Lack of online security services
+* Payment method
+* Other customer characteristics
+
+SHAP is used for both:
+
+### Global Explainability
+
+Understanding which features have the greatest influence across the model.
+
+### Individual Explainability
+
+Understanding why a specific customer received a particular churn prediction.
+
+---
+
+# 4. Retention Recommendations
+
+The system connects predicted churn risk with customer characteristics and model insights to generate actionable retention recommendations.
+
+Examples include:
+
+* Contract upgrade opportunities
+* Personalized offers
+* Service bundle recommendations
+* Technical support assistance
+* Security service recommendations
+* Loyalty-focused retention strategies
+
+The objective is to transform:
+
+```text
+Prediction
+    ↓
+Risk Factor
+    ↓
+Recommendation
+    ↓
+Potential Retention Action
 ```
 
 ---
 
-#  Dataset
+# 5. Batch Prediction
 
-The project uses the **Telco Customer Churn dataset**, which contains information about telecommunications customers and whether they eventually churned.
+CHURN INTELLIGENCE supports analysis of multiple customers through CSV upload.
 
-The dataset includes information related to:
+Users can upload a telecommunications customer dataset and generate predictions for multiple customers.
 
-*  Customer demographics
-*  Customer tenure
-*  Phone services
-*  Internet services
-*  Payment methods
-*  Monthly charges
-*  Total charges
-*  Contract type
-*  Billing information
-*  Customer churn status
+Batch processing can provide:
 
-The target variable is:
+* Customer-level churn predictions
+* Churn probabilities
+* Risk classifications
+* Risk distributions
+* Aggregate churn statistics
+* Business-level insights
+
+### Dataset Requirement
+
+The uploaded dataset must contain the customer attributes required by the trained Telco preprocessing and prediction pipeline.
+
+The system is **not a generic CSV churn predictor**.
+
+---
+
+# 6. Batch Analytics
+
+Batch Analytics provides a broader view of customer churn across an uploaded Telco customer dataset.
+
+Users can investigate:
+
+* Overall churn distribution
+* High-risk customer populations
+* Customer segments
+* Churn-related characteristics
+* Risk distributions
+* Key customer metrics
+
+This allows the platform to move from individual customer analysis toward portfolio-level customer intelligence.
+
+---
+
+# 7. Business Insights
+
+The Business Insights section transforms model predictions and customer data into higher-level business information.
+
+It is designed to help users understand:
+
+* Overall customer risk
+* Churn exposure
+* High-risk customer segments
+* Customer behavior patterns
+* Potential retention opportunities
+* Important churn drivers
+
+This provides a bridge between Machine Learning output and business decision-making.
+
+---
+
+# 8. Interactive Web Application
+
+The system is implemented as an interactive **Streamlit** application.
+
+The interface provides a professional dark SaaS-style design with:
+
+* CHURN INTELLIGENCE branding
+* Premium dashboard layout
+* Structured navigation
+* Customer risk views
+* Prediction interfaces
+* Analytics dashboards
+* Business insights
+* Model/system status indicators
+* About section
+* Responsive data visualizations
+
+---
+
+# System Architecture
+
+The overall system follows an end-to-end Machine Learning pipeline:
+
+```text
+                    TELCO CUSTOMER DATA
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Data Loading        │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Data Preprocessing  │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Feature Engineering │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Machine Learning    │
+                 │ Model               │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Churn Prediction    │
+                 └──────────┬──────────┘
+                            │
+                 ┌──────────┴──────────┐
+                 ▼                     ▼
+        ┌─────────────────┐   ┌─────────────────┐
+        │ Risk Analysis   │   │ SHAP Explainable│
+        │                 │   │ AI              │
+        └────────┬────────┘   └────────┬────────┘
+                 │                     │
+                 └──────────┬──────────┘
+                            ▼
+                 ┌─────────────────────┐
+                 │ Retention           │
+                 │ Recommendations     │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Business Insights   │
+                 │ & Analytics         │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Streamlit Dashboard │
+                 └─────────────────────┘
+```
+
+---
+
+# Machine Learning Pipeline
+
+The Machine Learning workflow includes:
+
+```text
+Raw Telco Dataset
+       ↓
+Data Validation
+       ↓
+Data Cleaning
+       ↓
+Preprocessing
+       ↓
+Feature Engineering
+       ↓
+Train / Test Split
+       ↓
+Model Training
+       ↓
+Model Evaluation
+       ↓
+Model Selection
+       ↓
+Prediction
+       ↓
+Explainability
+       ↓
+Business Recommendations
+```
+
+---
+
+# Model Evaluation
+
+Multiple classification metrics are used to evaluate model performance.
+
+These include:
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* ROC-AUC
+* Confusion Matrix
+
+Because customer churn is a business-risk problem, **accuracy alone is not sufficient** for evaluating the effectiveness of a churn prediction model.
+
+Particular attention is given to metrics such as:
+
+* Recall
+* Precision
+* F1-Score
+* ROC-AUC
+
+These provide a more meaningful understanding of the model's ability to identify customers who may churn.
+
+---
+
+# Explainable AI Architecture
+
+The explainability component is based on SHAP.
+
+```text
+Customer
+   │
+   ▼
+Prediction Model
+   │
+   ▼
+Churn Probability
+   │
+   ▼
+SHAP Analysis
+   │
+   ├── Global Feature Importance
+   │
+   └── Individual Customer Explanation
+                │
+                ▼
+        Main Risk Factors
+                │
+                ▼
+        Retention Recommendation
+```
+
+This approach helps bridge the gap between Machine Learning predictions and human decision-making.
+
+---
+
+# Technology Stack
+
+| Technology   | Purpose                        |
+| ------------ | ------------------------------ |
+| Python       | Core programming language      |
+| Pandas       | Data manipulation and analysis |
+| NumPy        | Numerical computing            |
+| Scikit-learn | Machine Learning               |
+| SHAP         | Explainable AI                 |
+| Matplotlib   | Visualization                  |
+| Seaborn      | Statistical visualization      |
+| Plotly       | Interactive visualization      |
+| Streamlit    | Web application and dashboard  |
+| Git          | Version control                |
+| GitHub       | Source code management         |
+
+---
+
+# Project Structure
+
+```text
+Customer-Churn-Prediction-System/
+│
+├── app/
+│   └── app.py
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── docs/
+│
+├── models/
+│
+├── outputs/
+│   ├── reports/
+│   └── shap/
+│
+├── src/
+│   ├── data/
+│   ├── models/
+│   ├── explainability/
+│   └── recommendation/
+│
+├── tests/
+│
+├── .streamlit/
+│   └── config.toml
+│
+├── .gitignore
+├── LICENSE
+├── main.py
+├── README.md
+└── requirements.txt
+```
+
+---
+
+# Installation
+
+## 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd Customer-Churn-Prediction-System
+```
+
+## 2. Create a virtual environment
+
+### Windows
+
+```powershell
+python -m venv .venv
+```
+
+Activate it:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### macOS / Linux
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+---
+
+## 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Running the Application
+
+From the project root:
+
+```bash
+streamlit run app/app.py
+```
+
+The Streamlit application will open in your browser.
+
+---
+
+# Dataset
+
+The project is based on the **Telco Customer Churn dataset**.
+
+The dataset contains telecommunications customer information covering areas such as:
+
+* Customer demographics
+* Tenure
+* Contract information
+* Billing
+* Monthly charges
+* Total charges
+* Phone services
+* Internet services
+* Additional services
+* Payment methods
+* Churn status
+
+The prediction target is:
 
 ```text
 Churn
@@ -145,309 +528,188 @@ where:
 
 ```text
 Yes → Customer churned
-No  → Customer stayed
+No  → Customer remained
 ```
 
 ---
 
-# 🔬 Current Project Progress
+# Business Value
 
-The project is being developed step-by-step as an end-to-end Machine Learning system.
+A churn prediction system can help telecommunications organizations move from reactive customer retention toward proactive customer management.
 
-###  Completed
-
-* [x] Project environment setup
-* [x] Dataset collection
-* [x] Project folder structure
-* [x] Initial dataset inspection
-* [x] Exploratory Data Analysis
-* [x] Churn distribution analysis
-* [x] Categorical feature analysis
-* [x] Numerical feature analysis
-* [x] Churn rate visualization
-* [x] Identification of important customer patterns
-
-
-###  In Progress
-* [ ] Data preprocessing
-* [ ] Data type conversion
-* [ ] Preparation of data for Machine Learning
-* [ ] Feature engineering
-* [ ] Train-test split
-* [ ] Feature scaling
-* [ ] Machine Learning model development
-* [ ] Model comparison
-* [ ] Hyperparameter tuning
-
-###  Planned
-
-* [ ] Model evaluation
-* [ ] Churn probability prediction
-* [ ] SHAP Explainable AI
-* [ ] Personalized retention recommendations
-* [ ] Interactive dashboard
-* [ ] Customer data upload
-* [ ] Web application
-* [ ] Model deployment
-
----
-
-#  Exploratory Data Analysis
-
-During the EDA phase, different customer attributes were investigated to understand their relationship with churn.
-
-Some important patterns identified include:
-
-###  Contract Type
-
-Customers with shorter-term contracts show a higher tendency to churn compared with customers on longer-term contracts.
-
-###  Internet Service
-
-Customers using **Fiber Optic** internet services showed a comparatively higher churn rate within the analyzed dataset.
-
-###  Monthly Charges
-
-Higher monthly charges were associated with increased churn among the analyzed customers.
-
-###  Online Security & Technical Support
-
-Customers without additional services such as online security and technical support showed higher churn tendencies.
-
-These observations will later be used to support feature engineering and model interpretation.
-
----
-
-# 🛠️ Technology Stack
-
-| Technology                   | Purpose                           |
-| ---------------------------- | --------------------------------- |
-|  Python                    | Core programming language         |
-|  Pandas                    | Data manipulation and analysis    |
-|  NumPy                     | Numerical computing               |
-|  Matplotlib                | Data visualization                |
-|  Seaborn                   | Statistical visualization         |
-|  Scikit-learn              | Machine Learning                  |
-|  SHAP                      | Explainable AI                    |
-|  Streamlit / Web Framework | Planned application interface     |
-|  Plotly                    | Planned interactive visualization |
-|  Git & GitHub              | Version control                   |
-
----
-
-#  Project Structure
+Instead of waiting for a customer to leave:
 
 ```text
-Customer-Churn-Prediction-System/
-│
-├── data/
-│   ├── raw/
-│   │   └── Telco-Customer-Churn.csv
-│   │
-│   └── processed/
-│
-├── notebooks/
-│
-├── src/
-│   ├── data/
-│   ├── preprocessing/
-│   ├── visualization/
-│   ├── models/
-│   └── explainability/
-│
-├── app/
-│
-├── models/
-│
-├── reports/
-│
-├── .gitignore
-├── LICENSE
-├── README.md
-├── requirements.txt
-└── main.py
-```
-
-> **Note:** The project structure will evolve as new Machine Learning, explainability, dashboard, and deployment components are developed.
-
----
-
-#  Machine Learning Strategy
-
-The Machine Learning stage will investigate multiple classification algorithms rather than relying on a single model.
-
-Potential models include:
-
-```text
-Logistic Regression
-        ↓
-Decision Tree
-        ↓
-Random Forest
-        ↓
-Gradient Boosting
-        ↓
-Other suitable classification models
-```
-
-Models will be compared using appropriate classification metrics such as:
-
-* Accuracy
-* Precision
-* Recall
-* F1-Score
-* ROC-AUC
-* Confusion Matrix
-
-Because customer churn prediction is a business-risk problem, **accuracy alone will not be treated as the only measure of model performance.**
-
----
-
-#  Explainable AI
-
-A major goal of this project is to make Machine Learning predictions understandable.
-
-Instead of simply saying:
-
-```text
-Customer → HIGH CHURN RISK
-```
-
-the final system aims to provide an explanation such as:
-
-```text
- High Churn Risk
-
-Main contributing factors:
-
-• Month-to-month contract
-• High monthly charges
-• Fiber optic internet
-• No online security
-• Short customer tenure
-```
-
-SHAP will be investigated to understand both:
-
-*  Global model behavior
-*  Individual customer predictions
-
----
-
-#  Personalized Retention Strategies
-
-The final system will attempt to connect churn predictions with actionable business recommendations.
-
-For example:
-
-```text
-High Churn Risk
-        │
-        ▼
-Identify Risk Factors
-        │
-        ▼
-Generate Customer-Specific Recommendation
-        │
-        ▼
-Retention Action
-```
-
-Possible recommendations could include:
-
-*  Contract upgrade offers
-*  Personalized discounts
-*  Security service bundles
-*  Technical support assistance
-*  Loyalty offers
-*  Service plan recommendations
-
----
-
-#  Planned Dashboard
-
-The future dashboard will provide an interactive view of customer churn.
-
-Possible dashboard components:
-
-###  Key Performance Indicators
-
-* Total Customers
-* Churned Customers
-* Churn Rate
-* Average Monthly Charges
-* High-Risk Customers
-
-###  Visual Analytics
-
-* Churn by Contract
-* Churn by Internet Service
-* Churn by Tenure
-* Churn by Payment Method
-* Churn by Monthly Charges
-* Customer Risk Distribution
-
-###  Individual Customer Analysis
-
-Users will eventually be able to inspect an individual customer's:
-
-```text
-Customer Profile
-      ↓
+Customer Behavior
+       ↓
+Risk Detection
+       ↓
 Churn Probability
-      ↓
-Risk Level
-      ↓
-SHAP Explanation
-      ↓
-Recommended Retention Strategy
+       ↓
+Explain Risk
+       ↓
+Recommend Action
+       ↓
+Retention Opportunity
 ```
+
+Potential business benefits include:
+
+* Earlier identification of high-risk customers
+* Better customer segmentation
+* More targeted retention campaigns
+* Data-driven customer engagement
+* Improved understanding of churn drivers
+* More informed retention decisions
 
 ---
 
-#  Future Vision
+# Current Capabilities
 
-The long-term goal is to transform this project from a traditional Machine Learning model into a **decision-support system for customer retention**.
+The current version of CHURN INTELLIGENCE includes:
+
+* [x] Telco customer churn prediction
+* [x] Churn probability estimation
+* [x] Customer risk classification
+* [x] Individual customer risk analysis
+* [x] SHAP Explainable AI
+* [x] Global feature importance
+* [x] Individual prediction explanations
+* [x] Retention recommendations
+* [x] Batch customer prediction
+* [x] Batch analytics
+* [x] Business insights
+* [x] Interactive Streamlit dashboard
+* [x] Premium dashboard UI
+* [x] About section
+* [x] Model/system status indicators
+* [x] Telco-specific dataset validation
+
+---
+
+# Limitations
+
+The current system has several important limitations.
+
+### Industry Specificity
+
+The trained model is designed for telecommunications customer churn.
+
+It cannot be assumed to generalize to other industries without retraining and redesigning the relevant data pipeline.
+
+### Dataset Dependency
+
+Prediction quality depends on the quality, structure, and characteristics of the input customer data.
+
+### Model-Based Predictions
+
+Churn probabilities represent model estimates rather than guaranteed future customer behavior.
+
+### Business Recommendations
+
+Retention recommendations are decision-support suggestions and should be evaluated alongside business context, customer history, operational constraints, and company policies.
+
+---
+
+# Future Development
+
+Possible future improvements include:
+
+### Multi-Industry Support
+
+Develop separate churn prediction pipelines for industries such as:
+
+* SaaS
+* Banking
+* Insurance
+* Retail
+* Subscription services
+
+Each industry would require its own dataset, feature engineering, model, explainability layer, and business logic.
+
+### Advanced Model Optimization
+
+Future versions could investigate:
+
+* Hyperparameter optimization
+* Ensemble approaches
+* Advanced gradient boosting
+* Calibration of churn probabilities
+* Cost-sensitive learning
+* Automated model selection
+
+### MLOps
+
+Potential future additions include:
+
+* Model versioning
+* Automated retraining
+* Model monitoring
+* Data drift detection
+* Prediction monitoring
+* Experiment tracking
+
+### Deployment
+
+The platform could eventually be deployed as a production cloud application with:
+
+* Authentication
+* Role-based access
+* Secure data upload
+* API-based predictions
+* Database integration
+* Monitoring and logging
+
+---
+
+# Project Vision
+
+CHURN INTELLIGENCE is designed to evolve from a Machine Learning project into a broader **customer retention decision-support platform**.
+
+The long-term concept is:
 
 ```text
-Raw Customer Data
-        ↓
-Data Intelligence
-        ↓
-Churn Prediction
-        ↓
-Risk Probability
-        ↓
-Explainable AI
-        ↓
-Personalized Recommendation
-        ↓
-Business Action
+                 CUSTOMER DATA
+                      ↓
+               DATA INTELLIGENCE
+                      ↓
+              CHURN PREDICTION
+                      ↓
+               RISK PROBABILITY
+                      ↓
+              EXPLAINABLE AI
+                      ↓
+          CUSTOMER-SPECIFIC INSIGHT
+                      ↓
+          RETENTION RECOMMENDATION
+                      ↓
+                BUSINESS ACTION
 ```
 
-The system should not only answer:
+The core objective remains simple:
 
-> **"Who is likely to churn?"**
-
-but eventually:
-
-> **"Why are they likely to churn, and what should the business do about it?"**
+> **Predict churn. Explain the risk. Recommend an action.**
 
 ---
 
-#  Author
+# Author
 
-### Devinda Idamgedara
+## Devinda Idamgedara
 
 **BSc (Hons) Data Science Undergraduate**
 
-Interested in:
+Areas of interest:
 
-`Data Science` • `Machine Learning` • `Artificial Intelligence` • `Predictive Analytics`
+* Data Science
+* Machine Learning
+* Artificial Intelligence
+* Predictive Analytics
+* Explainable AI
+* Business Intelligence
 
 ---
 
-#  License
+# License
 
 This project is licensed under the **MIT License**.
 
@@ -455,8 +717,8 @@ See the [`LICENSE`](LICENSE) file for more information.
 
 ---
 
- **If you find this project interesting, consider giving the repository a star!**
+## Final Note
 
->  **This project is actively under development.**
->
-> New Machine Learning, Explainable AI, recommendation, visualization, and deployment features will be added progressively.
+CHURN INTELLIGENCE is an academic and portfolio-focused Machine Learning project demonstrating how predictive analytics, Explainable AI, and business intelligence can be combined into an end-to-end customer churn decision-support system.
+
+The current implementation focuses specifically on the **telecommunications domain**.
